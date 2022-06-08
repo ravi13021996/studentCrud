@@ -45,6 +45,7 @@ let sampldata = {
     "rollno": "203",
     "marks": "96"
 }
+const PORT = process.env.PORT || 4000;
 
 app.post('/Login', (req, res) => {
     // console.log(req.body)
@@ -89,7 +90,7 @@ app.get('/sample', (req, res) => {
         expires: new Date(Date.now() + 60000),
         httpOnly: true
     })
-    console.log(req.body)
+
     if (count > 0) {
         count = count - 1
     }
@@ -192,6 +193,6 @@ app.post('/deleteStudent', (req, res) => {
 
 
 
-app.listen(4000, (req, res) => {
-    console.log("server is running at 4000")
+app.listen(PORT, (req, res) => {
+    console.log(`server is running at ${PORT}`)
 })
