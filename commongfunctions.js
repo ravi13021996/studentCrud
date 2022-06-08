@@ -23,6 +23,7 @@ function searchStudentByNameAndRollNo(rollno) {
 
 
 }
+let a;
 
 async function serchStudentAndUpdate(stuData) {
     return await studentSchema.findOneAndUpdate({ rollno: stuData.rollno }, {
