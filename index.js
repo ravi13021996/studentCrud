@@ -85,6 +85,10 @@ app.get("/getAll", async(req, res) => {
 
 
 let count = 10
+app.get("/free", (req, res) => {
+    res.send({ message: "free apiEndpoint" })
+})
+
 app.get('/sample', (req, res) => {
     res.cookie("jwtTocken", "ravi", {
         expires: new Date(Date.now() + 60000),
